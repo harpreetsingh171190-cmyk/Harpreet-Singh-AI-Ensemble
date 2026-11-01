@@ -1,0 +1,17 @@
+name: Python Source Checks
+on:
+  push:
+  pull_request:
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile source without running GPU workloads
+        run: python -m compileall -q .
+      - name: Verify embedded provenance hashes
+        run: python tools/verify_sources.py
+        
