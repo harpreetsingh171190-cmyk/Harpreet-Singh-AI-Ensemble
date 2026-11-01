@@ -1,0 +1,176 @@
+{
+  "diagnostic_only_authorized": false,
+  "training_worker_sha256": "b15a93fa754261c1b8e0176684bdc04b1b4692a5c63ee040394b9e93fa8e882d",
+  "inference_authorized": true,
+  "source_hashes": {
+    "olmo_component.py": "32c7f5c4f89bced4e21bc5e852e1f9086b95d10842f009d5799a5c10be875f45",
+    "olmo_owned_path.py": "8e702264a084b93be8dbce9b1c50e59cd9b12ca0ded11ff67a7da73bbc642649"
+  },
+  "core_versions": {
+    "torch": "2.11.0+cu128",
+    "transformers": "5.16.1",
+    "peft": "0.20.0",
+    "accelerate": "1.14.0",
+    "safetensors": "0.8.0",
+    "numpy": "2.1.3",
+    "pandas": "2.3.3"
+  },
+  "base_files": [
+    {
+      "name": "model-00001-of-00006.safetensors",
+      "bytes": 2474775744,
+      "sha256": "215fd4ad7d0f5d83a6bbb2322cc2c76080b1fdac05e438606210442220c4ed9f"
+    },
+    {
+      "name": "model-00002-of-00006.safetensors",
+      "bytes": 2495815296,
+      "sha256": "08575313e1863e7c7af7ff12831033342ad39deea4635545eaf27b65d4518e51"
+    },
+    {
+      "name": "model-00003-of-00006.safetensors",
+      "bytes": 2462277424,
+      "sha256": "8b575321f45f7b7347358c75fb36d10bb3b3422802327c97c66eedea2718ec9d"
+    },
+    {
+      "name": "model-00004-of-00006.safetensors",
+      "bytes": 2428706272,
+      "sha256": "b46c6e7a37da4a188bbff066a4bea020e2576c49fb6c735e6208b33de0f0e76a"
+    },
+    {
+      "name": "model-00005-of-00006.safetensors",
+      "bytes": 2428706272,
+      "sha256": "1b89fd1f9c7d8712a48471bfaf31a26be0e83932ebe3b7d111fffd9aa0560362"
+    },
+    {
+      "name": "model-00006-of-00006.safetensors",
+      "bytes": 2306994712,
+      "sha256": "d131e899a6209c67b8c046bf747ae4e03850179c79f4406e73ced08671c748ff"
+    },
+    {
+      "name": "config.json",
+      "bytes": 623,
+      "sha256": "f1e210de0ba704c579768c154bf57e36e170868ffecb060a6e0d3f2e6b0b9710"
+    },
+    {
+      "name": "conversion-progress.json",
+      "bytes": 88783,
+      "sha256": "5d5856493d980f5cc2371c6e16769cb627174fc5cf09c8419353b4413a5240b9"
+    },
+    {
+      "name": "generation_config.json",
+      "bytes": 126,
+      "sha256": "73e7f06e4ea172c6edeb1a44cab4a603e76962a85ea7ef3245769ba46ca23a30"
+    },
+    {
+      "name": "LICENSE_APACHE_2_0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "name": "merges.txt",
+      "bytes": 916646,
+      "sha256": "b6fe424e334903f7fb84d3a106d9730455f4744b9fe3c21ee136d97a00e72502"
+    },
+    {
+      "name": "MODEL_WEIGHT_LICENSE_DECLARATION.txt",
+      "bytes": 603,
+      "sha256": "8ff0e78dea979a376700398e2e63467a5f6c39d53079f710897055489ba9faa7"
+    },
+    {
+      "name": "model.safetensors.index.json",
+      "bytes": 29593,
+      "sha256": "76424611ebaa0c3320284c7fb7a8fe8a05355f7ce4d0688097ae40ba634e02a3"
+    },
+    {
+      "name": "NOTICE.md",
+      "bytes": 690,
+      "sha256": "46c3931560a02beb073d6bc7b2d39d03330e289712ab1d8eb94c1e7a0c844201"
+    },
+    {
+      "name": "README.md",
+      "bytes": 12098,
+      "sha256": "a87d5b59422c6040caf0fc62cbcb5f7ace6c71489c1173cf6d9e000777eac962"
+    },
+    {
+      "name": "special_tokens_map.json",
+      "bytes": 125,
+      "sha256": "3c6bf7c09d5473c303cee8575a22bb51e5153c17d177a721b43cd4785c6d09ae"
+    },
+    {
+      "name": "tokenizer_config.json",
+      "bytes": 4345,
+      "sha256": "91c69c665697785ace4ec7dbd159e1839bc9bb5033ab05a56bb0547521dc9ab0"
+    },
+    {
+      "name": "tokenizer.json",
+      "bytes": 7137177,
+      "sha256": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca"
+    },
+    {
+      "name": "upstream-model.safetensors.index.json",
+      "bytes": 29594,
+      "sha256": "c285ec59423a5a7203724c6258f61d691c0816e4c3f79b1fede776298f894b07"
+    },
+    {
+      "name": "vocab.json",
+      "bytes": 1611056,
+      "sha256": "9e14712c91b37c7aab74b1306baa46ac342d620637a4b44523cdc3aec7d24195"
+    }
+  ],
+  "synthetic_ids": [
+    "synthetic-a",
+    "synthetic-b",
+    "synthetic-c",
+    "synthetic-d",
+    "synthetic-e"
+  ],
+  "classes": [
+    "claude-fable-5",
+    "claude-opus-4-6",
+    "claude-opus-4-8",
+    "claude-opus-5",
+    "claude-sonnet-5",
+    "gemini-3.1-pro-preview",
+    "gemini-3.6-flash",
+    "gemini-3.7-flash",
+    "gemini-3.8-flash",
+    "glm-5.3",
+    "glm-5.3-flash",
+    "gpt-5.5",
+    "gpt-5.6-luna",
+    "gpt-5.6-sol",
+    "gpt-5.6-terra",
+    "gpt-6-astra",
+    "kimi-k3",
+    "qwen3.8-max"
+  ],
+  "base_revision": "7df9a82518afdecae4e8c026b27adccc8c1f0032",
+  "production_admitted": true,
+  "synthetic_texts": [
+    "The quiet observatory opened before sunrise.",
+    "A small program sorts seven coloured stones.",
+    "Please compare the two imaginary calendars carefully."
+  ],
+  "train_sha256": "40a22ce8d88c5f46feb4637a099db815bef5f713ffe53e89dbe1b7b21de77707",
+  "base_manifest_sha256": "09fbb318fb7d036162159cc8936e7bd18ce6c24fa8ab192cbfdedaf390045fbe",
+  "diagnostic_cap_seconds": 1200,
+  "no_auto_retry": true,
+  "root_production_admitted": true,
+  "public_asset_release_audited": true,
+  "compact_manifest_sha256": "3ccc36f4a36bc21e09c43a8a32b0d7f6216004cf872835dd41e55925aab51f85",
+  "actual_GPU_diagnostic_audit_sha256": "7e3f981139841f5686648e20bdf365b9da7b5906c1692e8921f9aa813da443bf",
+  "public_file_allowlist": [
+    "adapter/adapter_model.safetensors",
+    "adapter/adapter_config.json",
+    "heads.safetensors",
+    "readouts.npz",
+    "synthetic_anchors.npz",
+    "LICENSE_APACHE_2_0.txt",
+    "NOTICE.md",
+    "provenance.json"
+  ],
+  "changed_public_loader_runtime_audit_sha256": "f7b8168579a8d5bf2ac564a7f86033a176326f90b282192cda9903425a1dfa7a",
+  "base_ref": "lightningv08/olmo2-7b-fp16-offline-weights/1",
+  "public_dataset_ref": "lightningv08/ntl-olmo2-native24-final-inference-assets/2",
+  "public_dataset_id": 12692007
+}

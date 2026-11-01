@@ -1,0 +1,11 @@
+# Install packages compatible with your Kaggle GPU image and model versions.
+# Not pinned: original notebook depends on preinstalled Kaggle packages and attached datasets.
+numpy
+pandas
+scipy
+scikit-learn
+transformers
+accelerate
+peft
+torch
+safetensors

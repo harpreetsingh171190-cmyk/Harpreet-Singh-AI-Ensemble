@@ -1,0 +1,22 @@
+if ckpt_name == "lora8b_v1":
+        joined_texts = test.text.tolist() + train.text.astype(str).tolist()
+        joined_features, heads = lora_features(ckpt, find_base(mc["base"]), joined_texts, mc["bs"])
+        Z = joined_features[:len(test)]
+        train_features = joined_features[len(test):]
+        gaussian = fit(train_features, y, train["prompt_id"].values,
+            dict(red="wpca", d=128, se_shrink="lw", sp_shrink="lw", lam_floor=1e-4,
+                 n_exact=3, inj=True, iters=5, repel=True, sp_scale=1.0))
+        gaussian["T1"] = gaussian["Tg"] = 3.0
+        if twin_rows.any():
+            group_labels = np.unique(groups[twin_rows], return_inverse=True)[1]
+            gaussian_logp = scores(Z[twin_rows], group_labels, gaussian)
+            assert np.isfinite(gaussian_logp).all()
+            LOGIT[twin_rows] += 0.10 * gaussian_logp
+            print("Grouped Gaussian8B complete", int(twin_rows.sum()), flush=True)
+        prompt_members = np.flatnonzero(train["prompt_id"].values == train["prompt_id"].values[0])[:2]
+        assert len(prompt_members)==2
+        check = scores(train_features[prompt_members], np.zeros(2,dtype=int), gaussian)
+        assert check.shape==(2,K) and np.isfinite(check).all() and np.allclose(np.exp(check).sum(1),1)
+        del joined_features, joined_texts, train_features, gaussian, check
+    else:
+        Z, heads = lora_features(ckpt, find_base(mc["base"]), test.text.tolist(), mc["bs"])
